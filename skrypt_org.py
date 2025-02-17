@@ -52,7 +52,7 @@ def index():
         wyniki = czytnik.readtext(obraz_szary)
 
         rozpoznany_tekst = "\n".join([filtrowanie(wynik[1]) for wynik in wyniki])           #laczenie wynikow w tekst dzielac nowa linia
-        return f"<h4>Rozpoznany tekst:</h4><p>{rozpoznany_tekst}</p>"
+        return f"<h4>Rozpoznany tekst:</h4><pre>{rozpoznany_tekst}</pre>"
     
     return '''
         <!doctype html>
